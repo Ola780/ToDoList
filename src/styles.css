@@ -1,0 +1,41 @@
+:root { --max: 980px; --pad: 16px; --bg: #0b0d12; --card: #121620; --muted: #9aa3b2; --fg: #e8ecf3; --accent: #6aa9ff; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; color: var(--fg); background: radial-gradient(1200px 800px at 20% -10%, #0f1530 0%, var(--bg) 50%), var(--bg); }
+
+
+.app-shell { min-height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
+.container { max-width: var(--max); padding: var(--pad); margin: 0 auto; }
+.stack { display: flex; flex-direction: column; }
+.gap { gap: 16px; }
+
+
+.navbar { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px); background: rgba(10,14,20,0.7); border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; padding: 12px var(--pad); }
+.brand { color: brown; text-align: left; font-size: 2rem ; font-weight: 800; letter-spacing: 0.5px; }
+.link { color: var(--fg); text-decoration: none; margin-left: 12px; padding: 8px 10px; border-radius: 10px; }
+.link:hover { background: rgba(255,255,255,0.05); }
+.link.active { background: rgba(106,169,255,0.18); color: white; }
+
+
+.footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 18px var(--pad); text-align: center; color: var(--muted); }
+
+
+.card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 16px; }
+.row { display: flex; gap: 8px; align-items: center; }
+.list { padding-left: 0; list-style: none; }
+.list li { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,0.08); }
+.list li:last-child { border-bottom: 0; }
+.list li.done { opacity: 0.7; text-decoration: line-through; }
+.muted { color: var(--muted); }
+
+
+button { appearance: none; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.02); color: var(--fg); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+button:hover { background: rgba(255,255,255,0.06); }
+button.ghost { background: transparent; border-color: rgba(255,255,255,0.18); }
+
+
+input, textarea { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(0,0,0,0.2); color: var(--fg); }
+label { display: grid; gap: 6px; }
+
+
+h1, h2, h3 { margin: 0; }
