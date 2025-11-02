@@ -38,11 +38,9 @@ export default function Todo() {
     }
 
 
-
-    function remove(id) {
-        setItems(prev => prev.filter(it => it.id !== id));
-    }
-
+function remove(id){
+      setItems(items.filter(item=>item.id!==id));
+}
 
     return (
         <div className="card">
